@@ -1,0 +1,124 @@
+.register {
+  min-height: 100vh;
+  background-image: linear-gradient(to right, #fff5bc, #cec1ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5vmax; /* Reduced padding */
+  box-sizing: border-box;
+  position: relative;
+}
+
+.register::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  backdrop-filter: blur(8px); /* Slight blur effect */
+  z-index: 1;
+}
+
+.registerForm {
+  background-color: white;
+  width: 95%; /* Increased width */
+  max-width: 550px; /* Slightly wider max-width */
+  border-radius: 12px; /* Slightly smaller border-radius */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  padding: 2vmax; /* Reduced padding */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 2; /* Ensures the form is above the overlay */
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.registerForm:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Enhanced shadow for better distinction */
+}
+
+.registerInputs {
+  box-sizing: border-box;
+  padding: 0.8vmax 1.8vmax; /* Reduced padding */
+  width: 100%; /* Full width to match the form's width */
+  border-radius: 10px; /* Slightly smaller border-radius */
+  border: 1px solid #ddd;
+  margin-bottom: 1.2vmax; /* Reduced margin between inputs */
+  font: 400 1rem "Roboto", sans-serif; /* Slightly smaller font size */
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Slight shadow */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.registerInputs:focus {
+  border-color: #cec1ff; /* Border color on focus to match the theme */
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.registerForm > input[type="file"] {
+  border-radius: 10px;
+  margin: 1.2vmax;
+  padding: 1vmax 1.5vmax; /* Reduced padding */
+  width: 47%; /* Reduced width */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Slight shadow */
+}
+
+.registerForm > input[type="file"]::-webkit-file-upload-button {
+  background-color: #263fad;
+  color: white;
+  padding: 1vmax 1.5vmax; /* Reduced padding */
+  border-radius: 10px;
+  border: none;
+  font: 500 1rem "Roboto", sans-serif; /* Slightly smaller font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-items: center;
+  justify-content: center;
+}
+
+.registerForm > input[type="file"]::-webkit-file-upload-button:hover {
+  background-color: #1d2e84; /* Darker shade on hover */
+}
+
+.registerForm > a {
+  align-self: flex-end;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6); /* Darker text color for better readability */
+  margin-top: 1.2vmax; /* Reduced margin */
+  transition: color 0.3s ease;
+}
+
+.registerForm > a:hover {
+  color: #cec1ff; /* Matching hover color */
+}
+
+@media screen and (max-width: 600px) {
+  .registerForm {
+    width: 100%;
+    max-width: 90%;
+    padding: 4vw; /* Adjusted padding for smaller screens */
+  }
+
+  .registerInputs {
+    padding: 4vw 6vw; /* Adjusted padding for smaller screens */
+    margin-bottom: 4vw; /* Adjusted margin for smaller screens */
+    font: 400 1rem "Roboto", sans-serif;
+  }
+
+  .registerForm > input[type="file"] {
+    width: 100%;
+  }
+
+  .registerForm > input[type="file"]::-webkit-file-upload-button {
+    width: 70%;
+  }
+
+  .registerForm > a {
+    align-self: center;
+  }
+}

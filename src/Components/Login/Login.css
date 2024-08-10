@@ -1,0 +1,118 @@
+/* Login/Signup Page Styling */
+.login {
+  height: 100vh;
+  background-image: linear-gradient(to right, #f8f8f8, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2vmax;
+  box-sizing: border-box;
+  /* background: url('your-background-image.jpg') no-repeat center center/cover; */
+  position: relative;
+}
+
+.login::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  backdrop-filter: blur(8px); /* Slight blur effect */
+  z-index: 1;
+}
+
+.loginForm {
+  background-color: white;
+  width: 95%;
+  max-width: 600px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Darker, more distinct shadow */
+  padding: 3vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 2; /* Ensures the form is above the overlay */
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.loginForm:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5); /* Stronger shadow effect */
+}
+
+.loginForm > input {
+  box-sizing: border-box;
+  padding: 1.5vmax 2.5vmax;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  margin-bottom: 2vmax;
+  font: 400 1.2rem "Roboto", sans-serif;
+  outline: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.loginForm > input:focus {
+  border-color: #ffb6b6;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.loginForm > input::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+.loginForm > button {
+  padding: 1.5vmax 3vmax;
+  width: 100%;
+  border-radius: 12px;
+  background-image: linear-gradient(135deg, #ffb6b6, #ff6f6f);
+  color: white;
+  border: none;
+  font: 500 1.2rem "Roboto", sans-serif;
+  cursor: pointer;
+  transition: background-image 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.loginForm > button:hover {
+  transform: translateY(-3px);
+  background-image: linear-gradient(135deg, #ff6f6f, #ffb6b6);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.loginForm > a {
+  align-self: flex-end;
+  text-decoration: none;
+  color: #666;
+  margin-top: 2vmax;
+  transition: color 0.3s ease;
+}
+
+.loginForm > a:hover {
+  color: #ff6f6f;
+}
+
+@media screen and (max-width: 600px) {
+  .loginForm {
+    width: 100%;
+    max-width: 95%;
+    padding: 5vw;
+  }
+
+  .loginForm > input {
+    padding: 5vw 7vw;
+    margin-bottom: 5vw;
+    font: 400 1.2rem "Roboto", sans-serif;
+  }
+
+  .loginForm > a {
+    align-self: center;
+    margin-top: 4vw;
+  }
+}

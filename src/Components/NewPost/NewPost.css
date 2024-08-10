@@ -1,0 +1,109 @@
+.newPost {
+  min-height: 100vh;
+  background-image: linear-gradient(to right, #f0f0f0, #d4d4d4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2vmax;
+  box-sizing: border-box;
+}
+
+.newPostForm {
+  background: linear-gradient(to right, #ffffff, #f9f9f9);
+  width: 50%;
+  max-width: 600px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 3vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newPostForm:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.newPostForm > img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 2vmax;
+}
+
+.newPostForm > h3 {
+  margin: 2vmax;
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.newPostForm > input[type="text"] {
+  width: 100%;
+  padding: 1.5vmax;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  outline: none;
+  font: 400 1.2rem "Roboto", sans-serif;
+  margin-bottom: 2vmax;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.newPostForm > input[type="text"]:focus {
+  border-color: #ffb6b6;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.newPostForm > input[type="file"] {
+  width: 100%;
+  padding: 1.5vmax;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  margin-bottom: 2vmax;
+  outline: none;
+  font: 400 1.2rem "Roboto", sans-serif;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.newPostForm > input[type="file"]::-webkit-file-upload-button {
+  background-image: linear-gradient(135deg, #3a9ad9, #1f77d0);
+  color: white;
+  padding: 1vmax;
+  border-radius: 12px;
+  border: none;
+  font: 500 1.2rem "Roboto", sans-serif;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: background-image 0.3s ease, transform 0.3s ease;
+}
+
+.newPostForm > input[type="file"]::-webkit-file-upload-button:hover {
+  transform: translateY(-3px);
+  background-image: linear-gradient(135deg, #1f77d0, #3a9ad9);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 600px) {
+  .newPostForm {
+    width: 90%;
+    padding: 5vw;
+  }
+
+  .newPostForm > input[type="text"],
+  .newPostForm > input[type="file"] {
+    padding: 4vw;
+    margin-bottom: 4vw;
+  }
+
+  .newPostForm > input[type="file"]::-webkit-file-upload-button {
+    padding: 4vw;
+  }
+}

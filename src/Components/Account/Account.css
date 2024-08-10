@@ -1,0 +1,195 @@
+/* General Styles */
+.account {
+  box-sizing: border-box;
+  display: flex; /* Changed from grid to flexbox */
+  flex-direction: row; /* Ensures side-by-side layout */
+  height: 90vh;
+  overflow: hidden; /* Prevent overall scrollbar */
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(238, 235, 235); /* Match background color with home section */
+}
+
+/* Left Section */
+.accountleft {
+  background-image: linear-gradient(to right, #ffffff, #f8f8f8); /* Softer gradient */
+  flex: 1; /* Takes up remaining space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2vmax;
+  box-sizing: border-box;
+  overflow-y: auto;
+  height: 100%; /* Ensure it fills the height */
+}
+
+/* Right Section */
+.accountright {
+  background-color: #fff; /* White background for a clean look */
+  padding: 2vmax;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 350px; /* Fixed width */
+  height: 100vh; /* Ensure it fills the height */
+  overflow-y: auto;
+}
+
+/* Profile Image */
+.accountright img {
+  transition: all 0.5s;
+  width: 38%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 2vmax;
+  margin-top: 2vmax;
+  border: 2px solid #ffb6b6; /* Softer border color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.accountright img:hover {
+  transform: scale(1.1);
+}
+
+/* Heading */
+.accountright > h5 {
+  margin: 0.5vmax;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Links */
+.accountright > a {
+  color: rgba(0, 0, 0, 0.7); /* Slightly darker text */
+  text-decoration: none;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 1vmax;
+  padding: 0.5vmax 1vmax;
+  border-radius: 5px;
+  transition: all 0.5s;
+  display: block;
+}
+
+.accountright > a:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  background-color: #e0e0e0;
+}
+
+/* Button Container */
+.accountright > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1vmax;
+  width: 100%;
+}
+
+/* Buttons */
+.accountright > div > button {
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 200px;
+}
+
+.accountright > div > button:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  background-color: #e0e0e0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .account {
+    flex-direction: column; /* Stacks sections on smaller screens */
+    height: auto;
+    padding: 2vmax 1vmax;
+  }
+
+  .accountleft, .accountright {
+    width: 100%; /* Full width for both sections */
+    max-width: 100%;
+    height: auto;
+  }
+
+  .accountright {
+    margin-top: 2vmax;
+    box-shadow: none; /* Remove shadow for a cleaner look on smaller screens */
+    border-radius: 0; /* Remove border-radius */
+  }
+  .accountright img {
+    width: 15%;
+    /* margin-bottom: 1vmax; */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .account {
+    padding: 1vmax;
+  }
+
+  .accountleft, .accountright {
+    padding: 2vmax 1vmax;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .accountright > h5 {
+    font-size: 1.2rem;
+  }
+
+  .accountright img {
+    width: 15%;
+    margin-bottom: 1vmax;
+  }
+
+  .accountright > a {
+    font-size: 0.9rem;
+    margin-top: 2vw;
+  }
+
+  .accountright > div > button {
+    max-width: 90%;
+    margin-top: 2vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .account {
+    padding: 1vmax;
+  }
+
+  .accountleft, .accountright {
+    padding: 2vmax 1vmax;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .accountright > h5 {
+    font-size: 1rem;
+  }
+  .subb{
+    font-size: 6rem;
+  }
+
+  .accountright img {
+    width: 15%;
+    margin-bottom: 1.8vmax;
+  }
+
+  .accountright > a {
+    font-size: 0.9rem;
+    margin-top: 2vw;
+  }
+
+  .accountright > div > button {
+    max-width: 90%;
+    margin-top: 2vw;
+  }
+}

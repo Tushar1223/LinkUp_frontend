@@ -1,0 +1,98 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #151966;
+}
+
+.headerimage {
+  width: 8%;
+  height: 8%;
+  margin: 0vmax 21vmax 0vmax -18vmax;
+}
+
+.header > a {
+  width: 2vmax;
+  height: 2vmax;
+  margin: 1vmax 7vmax 2vmax 3.6vmax;
+}
+
+.header > a > svg {
+  font-size: 2.5vmax;
+  transition: all 0.5s;
+  color: white;
+}
+
+.header > a > svg:hover {
+  color: grey;
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    justify-content: space-between;
+    padding: 1vmax;
+  }
+
+  .headerimage {
+    width: 12%;
+    height: auto;
+    margin: 0;
+  }
+
+  .header > a {
+    width: 5vmax;
+    height: 5vmax;
+    margin: 0 3vmax;
+  }
+
+  .header > a > svg {
+    font-size: 5vmax;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    justify-content: space-between;
+    padding: 1vmax;
+  }
+
+  .headerimage {
+    width: 15%;
+    height: auto;
+    margin: 0;
+  }
+
+  .header > a {
+    width: 6vmax;
+    height: 6vmax;
+    margin: 0 2vmax;
+  }
+
+  .header > a > svg {
+    font-size: 6vmax;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    justify-content: space-around;
+    padding: 1vmax;
+  }
+
+  .headerimage {
+    width: 20%;
+    height: auto;
+    margin: 0;
+  }
+
+  .header > a {
+    width: 7vmax;
+    height: 7vmax;
+    margin: 0 1vmax;
+  }
+
+  .header > a > svg {
+    font-size: 6vmax;
+  }
+}

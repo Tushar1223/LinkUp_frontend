@@ -1,0 +1,109 @@
+.home {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  height: 91vh;
+  overflow: hidden; /* Prevent overall scrollbar */
+  background-color: #f2f2f2; /* Light gray background for the entire home section */
+}
+
+.homeleft {
+  background-color: #ffffff; /* White background for posts area */
+  overflow-y: scroll; /* Allow scrolling within home section */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2vmax;
+  box-sizing: border-box;
+  border-radius: 12px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow to add depth */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+}
+
+.homeleft::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in WebKit browsers (Chrome, Safari) */
+}
+
+.homeright {
+  padding: 2vmax;
+  box-sizing: border-box;
+  overflow-y: auto;
+  background-color: #f7f7f7; /* Very light gray for a clean look */
+  border-left: 1px solid #d9d9d9; /* Subtle border to define the sidebar area */
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Soft shadow to add depth */
+  max-height: 100vh; /* Ensure the sidebar fits within the viewport height */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+  border-radius: 12px; /* Rounded corners for a unified look */
+}
+
+.homeright::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in WebKit browsers */
+}
+
+/* Styling each user in the sidebar */
+.homeUser {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333333; /* Darker text for better readability */
+  padding: 0.5vmax 1vmax; /* Adding padding for better spacing */
+  transition: all 0.3s ease; /* Smoother transition for hover effect */
+  border-radius: 8px; /* Slightly rounded corners for a modern look */
+  margin-bottom: 1vmax; /* Spacing between users */
+  background-color: #f7f7f7; /* Light background to highlight user elements */
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); Light shadow for subtle depth */
+}
+
+.homeUser > img {
+  height: 3vmax;
+  width: 3vmax;
+  margin-right: 1vmax; /* Adjusted margin for better spacing */
+  border-radius: 50%;
+  border: 2px solid #0077b6; /* Blue border for accent */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Hover effect for users in the sidebar */
+.homeUser:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Stronger shadow effect */
+  background-color: #f0f0f0; /* Slightly darker background on hover */
+}
+
+
+@media screen and (max-width: 768px) {
+  .home {
+    grid-template-columns: 100%; /* Full-width content on mobile */
+    grid-template-rows: auto 1fr; /* Adjust for vertical layout */
+  }
+
+  .homeleft {
+    padding: 1vmax;
+    width: 100%; /* Ensure full-width on smaller screens */
+    min-height: 80vh;
+    border-radius: 8px; /* Slightly reduced border-radius for smaller screens */
+  }
+
+  .homeright {
+    display: none; /* Hide sidebar on mobile screens */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .homeleft {
+    padding: 1vmax;
+    min-height: 90vh;
+    border-radius: 8px;
+  }
+
+  .homeUser > img {
+    height: 4vmax;
+    width: 4vmax; /* Increase size for better visibility */
+  }
+
+  .homeUser {
+    padding: 1vmax;
+  }
+}

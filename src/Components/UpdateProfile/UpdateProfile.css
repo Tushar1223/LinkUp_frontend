@@ -1,0 +1,133 @@
+.updateProfile {
+  min-height: 100vh;
+  background-image: linear-gradient(to right, #e6e9f0, #eef1f5); /* Softer, cooler gradient for a clean background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5vmax; /* Reduced padding to match the register page */
+  box-sizing: border-box;
+  position: relative;
+}
+
+.updateProfile::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(0, 0, 0, 0.5); Semi-transparent overlay */
+  backdrop-filter: blur(8px); /* Slight blur effect */
+  z-index: 1;
+}
+
+.updateProfileForm {
+  background-color: white;
+  width: 95%; /* Increased width for better space usage */
+  max-width: 550px; /* Consistent max-width */
+  border-radius: 12px; /* Smaller border-radius for a neat look */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  padding: 2vmax; /* Reduced padding for a cleaner layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 2; /* Ensures the form is above the overlay */
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.updateProfileForm:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+.updateProfileForm > .MuiAvatar-root {
+  height: 10vmax;
+  width: 10vmax;
+  margin-bottom: 1.5vmax; /* Space between avatar and inputs */
+}
+
+.updateProfileForm > input[type="file"] {
+  border-radius: 10px; /* Consistent border-radius */
+  margin-bottom: 1.2vmax; /* Space between file input and other inputs */
+  padding: 1vmax 1.5vmax; /* Reduced padding for better alignment */
+  width: 47%; /* Adjusted width for the file input */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Slight shadow */
+}
+
+.updateProfileForm > input[type="file"]::-webkit-file-upload-button {
+  background-color: #263fad;
+  color: white;
+  padding: 1vmax 1.5vmax; /* Consistent padding */
+  border-radius: 10px; /* Consistent border-radius */
+  border: none;
+  font: 500 1rem "Roboto", sans-serif; /* Slightly smaller font */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-items: center;
+  justify-content: center;
+}
+
+.updateProfileForm > input[type="file"]::-webkit-file-upload-button:hover {
+  background-color: #1d2e84; /* Darker hover effect */
+}
+
+.updateProfileInputs {
+  box-sizing: border-box;
+  padding: 0.8vmax 1.8vmax; /* Reduced padding for inputs */
+  width: 100%; /* Full width to match the form’s width */
+  border-radius: 10px; /* Consistent border-radius */
+  border: 1px solid #ddd;
+  margin-bottom: 1.2vmax; /* Reduced margin for consistency */
+  font: 400 1rem "Roboto", sans-serif; /* Slightly smaller font */
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Slight shadow */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.updateProfileInputs:focus {
+  border-color: #cec1ff; /* Matching theme color on focus */
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.updateProfileForm > button {
+  width: 100%; /* Full width for the button */
+  padding: 1vmax 1.5vmax;
+  border-radius: 10px;
+  background-color: #263fad; /* Consistent button color */
+  color: white;
+  font: 500 1rem "Roboto", sans-serif; /* Slightly smaller font */
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.updateProfileForm > button:hover {
+  background-color: #1d2e84; /* Darker button on hover */
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+@media screen and (max-width: 600px) {
+  .updateProfileForm {
+    width: 100%;
+    max-width: 90%; /* Adjusted max-width for mobile */
+    padding: 4vw; /* Adjusted padding for smaller screens */
+  }
+
+  .updateProfileInputs, 
+  .updateProfileForm > button {
+    padding: 4vw 6vw; /* Adjusted padding for inputs and button */
+    margin-bottom: 4vw; /* Adjusted margin for consistency */
+    font: 400 1rem "Roboto", sans-serif;
+  }
+
+  .updateProfileForm > input[type="file"] {
+    width: 100%; /* Full width for mobile */
+  }
+
+  .updateProfileForm > input[type="file"]::-webkit-file-upload-button {
+    width: 70%; /* Adjusted width for mobile */
+  }
+}
