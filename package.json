@@ -2,7 +2,6 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-
   "dependencies": {
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
@@ -47,5 +46,4 @@
     ]
   },
   "proxy": "https://linkup-backend-csi6.onrender.com"
-
 }
