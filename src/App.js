@@ -69,10 +69,10 @@ function App() {
           path="/user/:id"
           element={isAuthenticated ? <UserProfile /> : <Login />}
         />
-
         <Route path="search" element={<Search />} />
 
         <Route path="*" element={<NotFound />} />
+
       </Routes>
     </Router>
   );
